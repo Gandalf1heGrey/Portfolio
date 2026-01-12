@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>DBZ Project | Connexion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+    <div class="auth-container">
+        <div class="auth-header">
+            <div class="logo"><img src="goku_render.png"></div>
+            <h1>Bienvenue !</h1>
+            <p>Connectez-vous pour gérer votre base de données.</p>
+        </div>
+
+        <form action="login_process.php" method="POST" class="auth-form">
+            <div class="form-group">
+                <label for="username">Pseudo ou Email</label>
+                <input type="text" id="username" name="username" placeholder="SonGoku" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn-main">Se connecter</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Pas encore de compte ? <a href="register.html">Créer un profil</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

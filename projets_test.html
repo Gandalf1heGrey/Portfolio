@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets | Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">./mon_logo</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets_test.html" class="active">Projets</a></li>
+            <li><a href="parcours.html">Parcours</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header class="section-header">
+            <h1>Mes Travaux</h1>
+            <p>Une sélection de projets réalisés en BUT et personnellement.</p>
+        </header>
+
+
+        <section class="projects-grid">
+            <div id="tooltip" class="tooltip-cursor">
+                <ul id="tooltip-list"></ul>
+            </div>
+            <a href="projet-sae.html" class="project-card" data-skills="Compétence 1|c1, Compétence 2|c2, Compétence 3|c3">
+                <div class="project-content">
+                    <span class="category">Catégorie 1</span>
+                    <h3>Projet 1</h3>
+                    <p>bla bla bla</p>
+                    <div class="tags">
+                        <span>Python (NO !)</span>
+                        <span>SQL</span>
+                    </div>
+
+                </div>
+            </a>
+
+            <a href="projet-web.html" class="project-card" data-skills="Compétence 1|c1, Compétence 4|c4, Compétence 6|c6">
+                <div class="project-content">
+                    <span class="category">Web Design</span>
+                    <h3>Projet jeu web</h3>
+                    <p>Un jeu web</p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="projet-3.html" class="project-card">
+                <div class="project-content">
+                    <span class="category">Catégorie 007</span>
+                    <h3>Projet 3</h3>
+                    <p>Projet 3</p>
+                    <div class="tags">
+                        <span>Fred</span>
+                        <span>Seb</span>
+                    </div>
+                </div>
+            </a>
+        </section>
+        <section class="competences-legend">
+            <hr>
+            <h3>Référentiel de compétences</h3>
+            <div class="legend-grid">
+                <ul>
+                    <li><span class="dot puce-c1"></span> 1 : Réaliser un développement d'application</li>
+                    <li><span class="dot puce-c2"></span> 2 : Optimiser des solutions informatiques</li>
+                    <li><span class="dot puce-c3"></span> 3 : Administrer des systèmes informatiques</li>
+                </ul>
+                <ul>
+                    <li><span class="dot puce-c4"></span> 4 : Gérer des données de l'information</li>
+                    <li><span class="dot puce-c5"></span> 5 : Conduire un projet</li>
+                    <li><span class="dot puce-c6"></span> 6 : Collaborer au sein d'une équipe</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+<script>
+    const tooltip = document.getElementById('tooltip');
+    const tooltipList = document.getElementById('tooltip-list');
+
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            // 1. Récupérer les compétences stockées dans la carte
+            const skills = card.getAttribute('data-skills').split(',');
+            tooltipList.innerHTML = skills.map(s => {
+                const [name, cl] = s.split('|');
+                return `<li class="puce-${cl}">${name}</li>`;
+            }).join('');
+
+            // 2. Afficher et positionner l'infobulle
+            tooltip.style.display = 'block';
+            tooltip.style.left = e.pageX + 5 + 'px';
+            tooltip.style.top = e.pageY - tooltip.offsetHeight + 5 + 'px'; 
+            // On soustrait sa propre hauteur pour qu'elle "flotte" au-dessus
+        });
+
+        card.addEventListener('mouseleave', () => {
+            tooltip.style.display = 'none';
+        });
+    });
+</script>
+</body>
+</html>

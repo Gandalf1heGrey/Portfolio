@@ -1,0 +1,114 @@
+:root {
+    --bg-color: #0b0e14;
+    --card-bg: #151921;
+    --text-main: #ffffff;
+    --text-dim: #94a3b8;
+    --accent: #38bdf8; /* Un bleu ciel électrique */
+}
+
+/* Styles spécifiques pour l'authentification */
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #1e293b 0%, #0b0e14 100%);
+}
+
+.auth-container {
+    background-color: var(--card-bg); /* Ton gris sombre habituel */
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.auth-header h1 {
+    z-index: 11;
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.auth-header {
+    position: relative; /* Indispensable pour que l'image se place par rapport au header */
+    padding-top: 100px; /* On crée de l'espace pour que l'image ne cache pas le titre */
+    text-align: center;
+}
+
+.logo img {
+    position: absolute;
+    top: -50px; /* On le fait remonter un peu au-dessus du bord du cadre */
+    left: 50%;
+    transform: translateX(-50%); /* Pour le centrer parfaitement */
+    width: 120px; /* Ajuste la taille selon tes besoins */
+    height: auto;
+    z-index: 10;
+}
+
+/* Style des champs de saisie */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 0.5rem;
+    font-family: monospace;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    background: #0b0e14;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #f59e0b; /* Orange Dragon Ball */
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+}
+
+/* Bouton spécifique */
+.btn-main {
+    width: 100%;
+    padding: 14px;
+    background-color: #f59e0b; /* Orange */
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-main:hover {
+    transform: translateY(-2px);
+    background-color: #fbbf24;
+}
+
+.auth-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+}
+
+.auth-footer a {
+    color: #f59e0b;
+    text-decoration: none;
+    font-weight: bold;
+}

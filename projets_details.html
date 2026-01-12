@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Projet | Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">./mon_logo</div>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="projets.html" class="active">Projets</a></li>
+            <li><a href="parcours.html">Parcours</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="container project-detail">
+        <header class="project-header">
+            <a href="projets.html" class="back-link">← Retour aux projets</a>
+            <h1>Projet Jeu Web</h1>
+            <div class="project-meta">
+                <span><strong>Rôle :</strong> Développeur Fullstack</span>
+                <span><strong>Durée :</strong> 2 semaines</span>
+                <span><strong>Technos :</strong> PHP, MySQL, Figma</span>
+            </div>
+            <div class="project-competences">
+                <div class="comp-badge"><span class="dot puce-c1"></span> Réaliser</div>
+                <div class="comp-badge"><span class="dot puce-c4"></span> Gérer</div>
+            </div>
+        </header>
+
+        <div class="project-grid-layout">
+            <section class="project-main-content">
+                <div class="project-image-container">
+                    <img src="votre-capture.png" alt="Aperçu du projet">
+                </div>
+
+                <div class="text-block">
+                    <h3>Présentation du projet</h3>
+                    <p>Développement d'une interface de gestion de personnages basée sur l'univers Dragon Ball. Ce projet visait à structurer une base de données complexe tout en proposant une interface utilisateur moderne.</p>
+                </div>
+
+                <div class="text-block">
+                    <h3>Solution technique</h3>
+                    <p>J'ai opté pour une architecture PHP pour la logique métier, couplée à une base de données MySQL. L'accent a été mis sur la sécurité (hachage des mots de passe) et la cohérence relationnelle des données.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+</html>
